@@ -1,0 +1,9 @@
+{
+  "name": "new-html",
+  "private": true,
+  "scripts": {
+    "start": "npx serve src"
+  },
+  "author": "Ben Ilegbodu",
+  "license": "ISC"
+}
