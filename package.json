@@ -5,6 +5,11 @@
   "scripts": {
     "start": "npx serve src"
   },
+  "prettier": {
+    "allowParens": "avoid",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "author": "Ben Ilegbodu",
   "license": "ISC"
 }
