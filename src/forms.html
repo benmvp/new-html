@@ -51,7 +51,7 @@
 
     <h1>Forms</h1>
 
-    <form>
+    <form id="examples-form">
       <fieldset class="fieldset">
         <legend>
           <a
@@ -340,7 +340,17 @@
         </div>
       </fieldset>
 
-      <button type="button" class="button success">Submit</button>
+      <button id="submit" type="button" class="button success">Submit</button>
     </form>
+
+    <script>
+      const onSubmit = () => {
+        const formData = new FormData(document.getElementById('examples-form'));
+
+        console.log('Form data:', Object.fromEntries(formData.entries()));
+      };
+
+      document.getElementById('submit').addEventListener('click', onSubmit);
+    </script>
   </body>
 </html>
