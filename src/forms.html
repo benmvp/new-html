@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+      }
+      form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    </style>
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form>
+      <section>
+        <h2>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
+            target="_blank"
+            ><code>&lt;datalist&gt;</code></a
+          >
+        </h2>
+
+        <fieldset class="form-example">
+          <label for="fruits">Choose a fruit:</label>
+          <input type="text" id="fruits" name="fruits" list="fruit-list" />
+          <datalist id="fruit-list">
+            <option value="Apple" />
+            <option value="Banana" />
+            <option value="Cherry" />
+            <option value="Date" />
+            <option value="Elderberry" />
+            <option value="Fig" />
+            <option value="Grape" />
+            <option value="Honeydew melon" />
+            <option value="Kiwi" />
+            <option value="Lemon" />
+            <option value="Mango" />
+            <option value="Nectarine" />
+            <option value="Orange" />
+            <option value="Pear" />
+            <option value="Quince" />
+            <option value="Raspberry" />
+            <option value="Strawberry" />
+            <option value="Tangerine" />
+            <option value="Ugli" />
+            <option value="Vanilla bean" />
+            <option value="Watermelon" />
+            <option value="Xigua melon" />
+            <option value="Yellow apple" />
+            <option value="Zucchini" />
+          </datalist>
+        </fieldset>
+
+        <fieldset class="form-example">
+          <label for="pick-up">Pick a pick up time:</label>
+          <input
+            type="time"
+            id="pick-up"
+            name="pick-up"
+            min="09:00"
+            max="18:00"
+            list="pick-up-times"
+          />
+          <datalist id="pick-up-times">
+            <option value="09:00" />
+            <option value="09:30" />
+            <option value="10:00" />
+            <option value="10:30" />
+            <option value="11:00" />
+            <option value="11:30" />
+            <option value="12:00" />
+            <option value="12:30" />
+            <option value="13:00" />
+            <option value="13:30" />
+            <option value="14:00" />
+            <option value="14:30" />
+            <option value="15:00" />
+            <option value="15:30" />
+            <option value="16:00" />
+            <option value="16:30" />
+            <option value="17:00" />
+            <option value="17:30" />
+            <option value="18:00" />
+          </datalist>
+        </fieldset>
+
+        <fieldset class="form-example">
+          <label for="tip">Choose a tip:</label>
+          <input
+            type="range"
+            id="tip"
+            name="tip"
+            min="0"
+            max="100"
+            step="5"
+            value="10"
+            list="tip-list"
+            style="width: 100%"
+          />
+          <datalist id="tip-list">
+            <option value="0" label="0%" />
+            <option value="5" />
+            <option value="10" />
+            <option value="15" />
+            <option value="20" />
+            <option value="25" label="25%" />
+            <option value="30" />
+          </datalist>
+        </fieldset>
+
+        <fieldset class="form-example">
+          <label for="color">Choose a color:</label>
+          <input
+            type="color"
+            id="color"
+            name="color"
+            value="#ff0000"
+            list="color-list"
+          />
+          <datalist id="color-list">
+            <option value="#FF0000" label="Red" />
+            <option value="#FFA500" label="Orange" />
+            <option value="#FFFF00" label="Yellow" />
+            <option value="#008000" label="Green" />
+            <option value="#0000FF" label="Blue" />
+            <option value="#4B0082" label="Indigo" />
+            <option value="#EE82EE" label="Violet" />
+          </datalist>
+        </fieldset>
+      </section>
+
+      <br />
+      <button class="button success">Submit</button>
+    </form>
+  </body>
+</html>
