@@ -261,6 +261,50 @@
         </div>
       </fieldset>
 
+      <fieldset class="fieldset">
+        <legend>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/capture"
+            target="_blank"
+            ><code>capture</code> attribute</a
+          >
+          (mobile web only)
+        </legend>
+
+        <div class="form-example">
+          <label for="photo">Take a photo of yourself:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            capture="user"
+          />
+        </div>
+
+        <div class="form-example">
+          <label for="video">Record a video of yourself:</label>
+          <input
+            type="file"
+            id="video"
+            name="video"
+            accept="video/*"
+            capture="user"
+          />
+        </div>
+
+        <div class="form-example">
+          <label for="audio">Record an audio clip of yourself:</label>
+          <input
+            type="file"
+            id="audio"
+            name="audio"
+            accept="audio/*"
+            capture="user"
+          />
+        </div>
+      </fieldset>
+
       <button class="button success">Submit</button>
     </form>
   </body>
