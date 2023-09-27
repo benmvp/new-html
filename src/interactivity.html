@@ -8,7 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="stylesheet" href="base.css" />
-    <style></style>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    </style>
 
     <title>Interactivity</title>
   </head>
@@ -25,6 +31,87 @@
 
     <main>
       <h1>Interactivity</h1>
+
+      <section>
+        <dialog id="favorite-browser-dialog">
+          <form>
+            <label for="favorite-browser">What is your favorite browser?</label>
+            <select id="favorite-browser">
+              <option value="default">Choose one...</option>
+              <option value="chrome">Chrome</option>
+              <option value="firefox">Firefox</option>
+              <option value="safari">Safari</option>
+              <option value="edge">Edge</option>
+              <option value="opera">Opera</option>
+              <option value="other">Other</option>
+            </select>
+
+            <div class="button-group">
+              <button
+                value="cancel"
+                formmethod="dialog"
+                class="button secondary"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                id="favorite-browser-confirm"
+                class="button primary"
+                value="default"
+              >
+                Confirm
+              </button>
+            </div>
+          </form>
+        </dialog>
+
+        <h2>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"
+            target="_blank"
+            ><code>&lt;dialog&gt;</code></a
+          >
+        </h2>
+        <button type="button" id="show-favorite-browser-dialog" class="button">
+          Pick favorite browser
+        </button>
+        <output id="favorite-browser-output"></output>
+      </section>
     </main>
+
+    <script>
+      const setupDialog = () => {
+        const showButton = document.getElementById(
+          'show-favorite-browser-dialog',
+        );
+        const favDialog = document.getElementById('favorite-browser-dialog');
+        const favBrowser = document.getElementById('favorite-browser');
+        const favOutput = document.getElementById('favorite-browser-output');
+        const favConfirm = document.getElementById('favorite-browser-confirm');
+
+        // "Pick favorite browser" button opens the <dialog> modally (on top of
+        // everything else in the page)
+        showButton.addEventListener('click', () => {
+          favDialog.showModal();
+        });
+
+        // FYI: "Cancel" button of form triggers "close" on dialog because of [formmethod="dialog"]
+
+        favDialog.addEventListener('close', (e) => {
+          favOutput.value =
+            favDialog.returnValue === 'default'
+              ? 'No return value'
+              : `Returning: ${favDialog.returnValue}`;
+        });
+
+        favConfirm.addEventListener('click', (e) => {
+          e.preventDefault();
+          favDialog.close(favBrowser.value);
+        });
+      };
+
+      setupDialog();
+    </script>
   </body>
 </html>
