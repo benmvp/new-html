@@ -1,6 +1,6 @@
-# New HTML features
+# Modern HTML features
 
-A simple project to test new HTML features.
+A simple project to test modern HTML features.
 
 ## Installation
 
