@@ -59,6 +59,13 @@
             target="_blank"
             ><code>&lt;datalist&gt;</code></a
           >
+          element &amp;
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/showPicker"
+            target="_blank"
+            ><code>showPicker</code></a
+          >
+          attribute
         </legend>
 
         <div class="form-example">
@@ -210,8 +217,15 @@
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
             target="_blank"
-            ><code>autocomplete</code> attribute</a
+            ><code>autocomplete</code></a
           >
+          &amp;
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable"
+            target="_blank"
+            ><code>contenteditable</code></a
+          >
+          attributes
         </legend>
 
         <div class="form-example">
@@ -305,9 +319,9 @@
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/capture"
             target="_blank"
-            ><code>capture</code> attribute</a
+            ><code>capture</code></a
           >
-          (mobile web only)
+          attribute (mobile web only)
         </legend>
 
         <div class="form-example">
@@ -344,17 +358,26 @@
         </div>
       </fieldset>
 
-      <button id="submit" type="button" class="button success">Submit</button>
+      <button id="view-form-data" type="button" class="button success">
+        View form data
+      </button>
     </form>
 
     <script>
-      const onSubmit = () => {
+      const onViewFormData = () => {
         const formData = new FormData(document.getElementById('examples-form'));
 
         console.log('Form data:', Object.fromEntries(formData.entries()));
+
+        window.open(
+          'https://developer.mozilla.org/en-US/docs/Web/API/FormData',
+          '_blank',
+        );
       };
 
-      document.getElementById('submit').addEventListener('click', onSubmit);
+      document
+        .getElementById('view-form-data')
+        .addEventListener('click', onViewFormData);
     </script>
   </body>
 </html>
