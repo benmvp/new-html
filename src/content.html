@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="base.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    </style>
+
+    <title>Content</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <nav class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="/">New HTML</a></li>
+          <li><a href="/forms.html">Forms</a></li>
+          <li><a href="/interactivity.html">Interactivity</a></li>
+          <li class="menu-text">Content</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Content</h1>
+
+      <section>
+        <h2>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes"
+            target="_blank"
+            ><code>sizes</code></a
+          >
+          &amp;
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"
+            target="_blank"
+            ><code>srcset</code></a
+          >
+        </h2>
+
+        <img
+          src="https://via.placeholder.com/2000/92c952"
+          srcset="
+            https://via.placeholder.com/320/92c952   320w,
+            https://via.placeholder.com/480/92c952   480w,
+            https://via.placeholder.com/800/92c952   800w,
+            https://via.placeholder.com/1200/92c952 1200w,
+            https://via.placeholder.com/2000/92c952 2000w
+          "
+          sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, (max-width: 800px) 760px, (max-width: 1200px) 1160px, 2000px"
+          alt="Placeholder Image"
+        />
+      </section>
+    </main>
+  </body>
+</html>
