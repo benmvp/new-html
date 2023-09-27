@@ -14,6 +14,12 @@
         flex-direction: column;
         gap: 2rem;
       }
+      #toast:popover-open {
+        position: absolute;
+        left: 0;
+        top: 30%;
+        width: 100%;
+      }
     </style>
 
     <title>Interactivity</title>
@@ -102,7 +108,6 @@
             subscription required.
           </p>
         </details>
-
         <details>
           <summary>What do I pay and when?</summary>
           <p>
@@ -113,7 +118,6 @@
             items in your Fix.
           </p>
         </details>
-
         <details>
           <summary>What do items cost?</summary>
           <p>
@@ -125,6 +129,24 @@
             >About our pricing</a
           >
         </details>
+      </section>
+
+      <section>
+        <h2>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+            target="_blank"
+            >Popover API</a
+          >
+        </h2>
+
+        <button type="button" class="button" popovertarget="toast">
+          Save for later
+        </button>
+        <div popover id="toast" class="callout success">
+          <h3>Success!</h3>
+          <p>Added to save for later</p>
+        </div>
       </section>
     </main>
 
@@ -159,7 +181,20 @@
         });
       };
 
+      const setupToast = () => {
+        const toast = document.getElementById('toast');
+
+        toast.addEventListener('toggle', (e) => {
+          if (e.newState) {
+            setTimeout(() => {
+              toast.hidePopover();
+            }, 2000);
+          }
+        });
+      };
+
       setupDialog();
+      setupToast();
     </script>
   </body>
 </html>
