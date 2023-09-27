@@ -21,11 +21,14 @@
         padding: 20px;
       }
       form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
       }
-      section {
+      fieldset {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -49,17 +52,17 @@
     <h1>Forms</h1>
 
     <form>
-      <section>
-        <h2>
+      <fieldset class="fieldset">
+        <legend>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
             target="_blank"
             ><code>&lt;datalist&gt;</code></a
           >
-        </h2>
+        </legend>
 
-        <fieldset class="form-example">
-          <labe for="fruits">Choose a fruit:</labe>
+        <div class="form-example">
+          <label for="fruits">Choose a fruit:</label>
           <input type="text" id="fruits" name="fruits" list="fruit-list" />
           <datalist id="fruit-list">
             <option value="Apple" />
@@ -87,9 +90,9 @@
             <option value="Yellow apple" />
             <option value="Zucchini" />
           </datalist>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-example">
+        <div class="form-example">
           <label for="pick-up">Pick a pick up time:</label>
           <input
             type="time"
@@ -120,9 +123,9 @@
             <option value="17:30" />
             <option value="18:00" />
           </datalist>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-example">
+        <div class="form-example">
           <label for="tip">Choose a tip:</label>
           <input
             type="range"
@@ -144,9 +147,9 @@
             <option value="25" label="25%" />
             <option value="30" />
           </datalist>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-example">
+        <div class="form-example">
           <label for="color">Choose a color:</label>
           <input
             type="color"
@@ -164,10 +167,100 @@
             <option value="#4B0082" label="Indigo" />
             <option value="#EE82EE" label="Violet" />
           </datalist>
-        </fieldset>
-      </section>
+        </div>
+      </fieldset>
 
-      <br />
+      <fieldset class="fieldset">
+        <legend>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
+            target="_blank"
+            ><code>autocomplete</code> attribute</a
+          >
+        </legend>
+
+        <div class="form-example">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" autocomplete="name" />
+        </div>
+
+        <div class="form-example grid-container full">
+          <div class="grid-x grid-padding-x">
+            <div class="medium-2 cell">
+              <label for="honorific-prefix">Prefix</label>
+              <input
+                type="text"
+                id="honorific-prefix"
+                name="honorific-prefix"
+                autocomplete="honorific-prefix"
+              />
+            </div>
+            <div class="medium-4 cell">
+              <label for="given-name">First Name</label>
+              <input
+                type="text"
+                id="given-name"
+                name="given-name"
+                autocomplete="given-name"
+              />
+            </div>
+            <div class="medium-4 cell">
+              <label for="family-name">Last Name</label>
+              <input
+                type="text"
+                id="family-name"
+                name="family-name"
+                autocomplete="family-name"
+              />
+            </div>
+            <div class="medium-2 cell">
+              <label for="honorific-suffix">Suffix</label>
+              <input
+                type="text"
+                id="honorific-suffix"
+                name="honorific-suffix"
+                autocomplete="honorific-suffix"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-example">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+        </div>
+
+        <div class="form-example">
+          <label for="new-password">Enter new password:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="form-example">
+          <label for="new-password">Confirm password:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="form-example">
+          <label for="street-address">Address:</label>
+          <input
+            type="text"
+            id="street-address"
+            name="street-address"
+            autocomplete="street-address"
+          />
+        </div>
+      </fieldset>
+
       <button class="button success">Submit</button>
     </form>
   </body>
