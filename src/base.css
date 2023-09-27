@@ -1,0 +1,7 @@
+@import url('https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css');
+@import url('https: //fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body > main {
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}

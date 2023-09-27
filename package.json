@@ -11,5 +11,6 @@
     "trailingComma": "all"
   },
   "author": "Ben Ilegbodu",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://benmvp-new-html.vercel.app/"
 }
