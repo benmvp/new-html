@@ -63,66 +63,91 @@
 
         <div class="form-example">
           <label for="fruits">Choose a fruit:</label>
-          <input type="text" id="fruits" name="fruits" list="fruit-list" />
-          <datalist id="fruit-list">
-            <option value="Apple" />
-            <option value="Banana" />
-            <option value="Cherry" />
-            <option value="Date" />
-            <option value="Elderberry" />
-            <option value="Fig" />
-            <option value="Grape" />
-            <option value="Honeydew melon" />
-            <option value="Kiwi" />
-            <option value="Lemon" />
-            <option value="Mango" />
-            <option value="Nectarine" />
-            <option value="Orange" />
-            <option value="Pear" />
-            <option value="Quince" />
-            <option value="Raspberry" />
-            <option value="Strawberry" />
-            <option value="Tangerine" />
-            <option value="Ugli" />
-            <option value="Vanilla bean" />
-            <option value="Watermelon" />
-            <option value="Xigua melon" />
-            <option value="Yellow apple" />
-            <option value="Zucchini" />
-          </datalist>
+          <div class="input-group">
+            <input
+              type="text"
+              id="fruits"
+              name="fruits"
+              list="fruit-list"
+              class="input-group-field"
+            />
+            <datalist id="fruit-list">
+              <option value="Apple" />
+              <option value="Banana" />
+              <option value="Cherry" />
+              <option value="Date" />
+              <option value="Elderberry" />
+              <option value="Fig" />
+              <option value="Grape" />
+              <option value="Honeydew melon" />
+              <option value="Kiwi" />
+              <option value="Lemon" />
+              <option value="Mango" />
+              <option value="Nectarine" />
+              <option value="Orange" />
+              <option value="Pear" />
+              <option value="Quince" />
+              <option value="Raspberry" />
+              <option value="Strawberry" />
+              <option value="Tangerine" />
+              <option value="Ugli" />
+              <option value="Vanilla bean" />
+              <option value="Watermelon" />
+              <option value="Xigua melon" />
+              <option value="Yellow apple" />
+              <option value="Zucchini" />
+            </datalist>
+            <button
+              type="button"
+              class="button"
+              onClick="getElementById('fruits').showPicker()"
+            >
+              Show
+            </button>
+          </div>
         </div>
 
         <div class="form-example">
           <label for="pick-up">Pick a pick up time:</label>
-          <input
-            type="time"
-            id="pick-up"
-            name="pick-up"
-            min="09:00"
-            max="18:00"
-            list="pick-up-times"
-          />
-          <datalist id="pick-up-times">
-            <option value="09:00" />
-            <option value="09:30" />
-            <option value="10:00" />
-            <option value="10:30" />
-            <option value="11:00" />
-            <option value="11:30" />
-            <option value="12:00" />
-            <option value="12:30" />
-            <option value="13:00" />
-            <option value="13:30" />
-            <option value="14:00" />
-            <option value="14:30" />
-            <option value="15:00" />
-            <option value="15:30" />
-            <option value="16:00" />
-            <option value="16:30" />
-            <option value="17:00" />
-            <option value="17:30" />
-            <option value="18:00" />
-          </datalist>
+          <div class="input-group">
+            <input
+              type="time"
+              id="pick-up"
+              name="pick-up"
+              min="09:00"
+              max="18:00"
+              list="pick-up-times"
+              class="input-group-field"
+            />
+            <datalist id="pick-up-times">
+              <option value="09:00" />
+              <option value="09:30" />
+              <option value="10:00" />
+              <option value="10:30" />
+              <option value="11:00" />
+              <option value="11:30" />
+              <option value="12:00" />
+              <option value="12:30" />
+              <option value="13:00" />
+              <option value="13:30" />
+              <option value="14:00" />
+              <option value="14:30" />
+              <option value="15:00" />
+              <option value="15:30" />
+              <option value="16:00" />
+              <option value="16:30" />
+              <option value="17:00" />
+              <option value="17:30" />
+              <option value="18:00" />
+            </datalist>
+            <button
+              type="button"
+              class="button"
+              onClick="getElementById('pick-up').showPicker()"
+            >
+              Show
+            </button>
+          </div>
         </div>
 
         <div class="form-example">
@@ -151,22 +176,32 @@
 
         <div class="form-example">
           <label for="color">Choose a color:</label>
-          <input
-            type="color"
-            id="color"
-            name="color"
-            value="#ff0000"
-            list="color-list"
-          />
-          <datalist id="color-list">
-            <option value="#FF0000" label="Red" />
-            <option value="#FFA500" label="Orange" />
-            <option value="#FFFF00" label="Yellow" />
-            <option value="#008000" label="Green" />
-            <option value="#0000FF" label="Blue" />
-            <option value="#4B0082" label="Indigo" />
-            <option value="#EE82EE" label="Violet" />
-          </datalist>
+          <div class="input-group">
+            <input
+              type="color"
+              id="color"
+              name="color"
+              value="#ff0000"
+              list="color-list"
+              class="input-group-field"
+            />
+            <datalist id="color-list">
+              <option value="#FF0000" label="Red" />
+              <option value="#FFA500" label="Orange" />
+              <option value="#FFFF00" label="Yellow" />
+              <option value="#008000" label="Green" />
+              <option value="#0000FF" label="Blue" />
+              <option value="#4B0082" label="Indigo" />
+              <option value="#EE82EE" label="Violet" />
+            </datalist>
+            <button
+              type="button"
+              class="button"
+              onClick="getElementById('color').showPicker()"
+            >
+              Show
+            </button>
+          </div>
         </div>
       </fieldset>
 
@@ -305,7 +340,7 @@
         </div>
       </fieldset>
 
-      <button class="button success">Submit</button>
+      <button type="button" class="button success">Submit</button>
     </form>
   </body>
 </html>
